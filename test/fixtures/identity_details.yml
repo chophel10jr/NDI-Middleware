@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id_type: 1
+  id_no: MyString
+  id_issued_on: 2024-04-11
+  id_expires_on: 2024-04-11
+  account: one
+
+two:
+  id_type: 1
+  id_no: MyString
+  id_issued_on: 2024-04-11
+  id_expires_on: 2024-04-11
+  account: two

@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dob: 2024-04-11
+  relationship: MyString
+  cid: MyString
+  contact_no: MyString
+  share_percentage: 9.99
+  account: one
+
+two:
+  name: MyString
+  dob: 2024-04-11
+  relationship: MyString
+  cid: MyString
+  contact_no: MyString
+  share_percentage: 9.99
+  account: two

@@ -1,0 +1,8 @@
+update_ndi_session_job:
+  cron: "*/1 * * * *"
+  class: "UpdateNdiSessionJob"
+  queue: default
+ndi_webhook_register_job:
+  cron: "@reboot"
+  class: "NdiWebhookRegisterJob"
+  queue: "default"
