@@ -1,8 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/*
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer components {
   .btn-primary {
@@ -10,58 +8,125 @@
   }
 }
 
-*/
-*, *::before, *::after {
-    box-sizing: inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-    min-height: 100vh;
-    margin: 0;
-    /*background-color: #DDDDDD;*/
-    font-family: 'Noto Serif', serif;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  margin: 0;
+  /*background-color: #DDDDDD;*/
+  font-family: "Noto Serif", serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 :root {
-    --bnb-blue: rgb(37, 45, 96);
-    --bnb-red: rgb(244, 0, 0);
-    --bnb-dark: rgb(24, 21, 43);
+  --bnb-blue: rgb(37, 45, 96);
+  --bnb-red: rgb(244, 0, 0);
+  --bnb-dark: rgb(24, 21, 43);
 }
 
-.form-input, .form-select, .form-date {
-    @apply w-full px-4 py-2 border bg-[#F6F6F6] text-gray-500 border-gray-300 rounded-md focus:border-bnb_blue focus:outline-none focus:ring-2 focus:ring-bnb_blue transition duration-300 placeholder-transparent;
+/* Heading and Title Fonts */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.title {
+  font-family: "Noto Serif", serif;
+}
+
+/* Body Font */
+
+.ndi-btn {
+  border: 2px solid #f0f9f4;
+  color: white;
+  border-radius: 28px !important;
+  padding: 12px 28px !important;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+
+.ndi-btn:hover {
+  border: 2px solid #f0f9f4;
+  background-color: #124143;
+}
+
+.qr-code-outline {
+  border: 3px solid #5ac994;
+  border-radius: 6px;
+  padding: 8px;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 0 30px;
+}
+
+.dechen {
+  background-color: #5ac994 !important;
+  color: white !important;
+  border-radius: 22px !important;
+  padding: 8px 28px !important;
+}
+
+.btn-blue-bnb {
+  color: white !important;
+  font-weight: bold;
+  background-color: #252d60 !important;
+  border-radius: 6px !important;
+  padding: 12px 24px 12px 14px;
+}
+
+.btn-blue-bnb-outline {
+  color: var(--bnb-blue) !important;
+  font-weight: bold;
+  background-color: white !important;
+  border-radius: 6px !important;
+  padding: 12px 24px 12px 14px;
+  border: 2px solid var(--bnb-red);
+}
+
+.error-message {
+  font-size: 12px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #f6f6f6 inset !important;
+  box-shadow: 0 0 0 1000px #f6f6f6 inset !important;
+  -webkit-text-fill-color: rgb(122, 122, 122) !important;
+  caret-color: inherit !important;
+}
+
+.form-input,
+.form-select,
+.form-date {
+  @apply w-full px-4 py-2 border bg-[#F6F6F6] text-gray-500 border-gray-300 rounded-md focus:border-bnb_blue focus:outline-none focus:ring-2 focus:ring-bnb_blue transition duration-300 placeholder-transparent;
 }
 
 .form-label {
-    @apply absolute top-[4px] left-[16px] pt-[4px] px-[4px] pointer-events-none transform transition duration-300 ease-in-out text-gray-500;
+  @apply absolute top-[4px] left-[16px] pt-[4px] px-[4px] pointer-events-none transform transition duration-300 ease-in-out text-gray-500;
 }
 
 .form-group {
-    @apply relative mb-4;
+  @apply relative mb-4;
 }
 
 .form-input:focus + .form-label,
 .form-input:not(:placeholder-shown) + .form-label {
-    @apply -translate-y-[16px] text-[12px] text-bnb_blue bg-[#F6F6F6];
+  @apply -translate-y-[16px] text-[12px] text-bnb_blue bg-[#F6F6F6];
 }
 
 [disabled] {
-    @apply cursor-not-allowed opacity-40 bg-gray-300 text-gray-500 border-gray-400;
-}
-
-
-.qr-code-outline {
-    border: 3px solid #5AC994;
-    border-radius: 6px;
-    padding: 8px;
-    width: 260px;
-    height: 260px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 16px 0 30px;
+  @apply cursor-not-allowed opacity-40 bg-gray-300 text-gray-500 border-gray-400;
 }
