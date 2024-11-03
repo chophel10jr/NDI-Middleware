@@ -17,6 +17,7 @@ gem 'sass-rails', '>= 6'
 gem 'sidekiq'
 gem 'sidekiq-cron'
 gem 'sqlite3', '~> 1.4'
+gem 'sprockets', '~> 3.5', '>= 3.5.2'
 gem 'turbolinks', '~> 5'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
